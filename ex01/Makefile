@@ -6,13 +6,13 @@
 #    By: mrahmani <mrahmani@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/15 13:50:59 by mrahmani          #+#    #+#              #
-#    Updated: 2022/03/20 12:23:24 by mrahmani         ###   ########.fr        #
+#    Updated: 2022/03/31 23:09:34 by mrahmani         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	phonebook
 
-SRCS	=	Phonebook.Class.cpp Contact.Class.cpp
+SRCS	=	Phonebook.Class.cpp Contact.Class.cpp main.cpp
 
 OBJS	=	${SRCS:.cpp=.o}
 

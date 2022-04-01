@@ -25,6 +25,8 @@ int main(int ac, char **av)
                 std::cout << c;
                 j++;
             }
+            if (i > 0 && i != ac - 1)
+                std::cout << " ";
             i++;
         }
     }

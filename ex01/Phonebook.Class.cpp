@@ -6,12 +6,13 @@
 /*   By: mrahmani <mrahmani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 13:52:39 by mrahmani          #+#    #+#             */
-/*   Updated: 2022/03/20 17:03:05 by mrahmani         ###   ########.fr       */
+/*   Updated: 2022/04/01 10:28:02 by mrahmani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Phonebook.Class.hpp"
 #include "Contact.Class.hpp"
+#include <algorithm>
 
 Phonebook::Phonebook(void)
 {
@@ -51,6 +52,11 @@ Phonebook::~Phonebook(void)
     return;
 }
 
+
+bool isNumber(const std::string& str)
+{
+    return str.find_first_not_of("0123456789") == std::string::npos;
+}
 void Phonebook::add_contact()
 {
     Contact contact;
@@ -70,6 +76,11 @@ void Phonebook::add_contact()
     contact.set_nickname(tmp);
     std::cout << "enter a phone number" << std::endl;
     std::cin >> tmp;
+    while (!isNumber(tmp))
+    {
+        std::cout << "phone number must be a 7 digit" << std::endl;
+        std::cin >> tmp;
+    }
     contact.set_phoneNbr(tmp);
     std::cout << "enter a darkest secret" << std::endl;
     std::cin >> tmp;
@@ -149,7 +160,6 @@ void Phonebook::search_contacts()
             std::cout << "Invlid index" << std::endl;
             return;
         }
-        // std::cout << "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww" << index << std::endl;
         if (check_index(index) == 0)
         {
             std::cout << "contact not fount" << std::endl;
@@ -163,7 +173,6 @@ int Phonebook::check_index(int index_)
     int i;
 
     i = 0;
-    // std::cout << "index = " << index_;
     if (index_ < 0 || index_ > 7)
         return 0;
     while (i < this->count)
@@ -173,26 +182,4 @@ int Phonebook::check_index(int index_)
         i++;
     }
     return (0);
-}
-
-int main()
-{
-    std::string command;
-    Phonebook phonebook;
-
-    while (1)
-    {
-        std::cout << "Enter a command: ADD, SEARCH OR EXIT > ";
-        std::cin >> command;
-        if (command.compare("ADD") == 0)
-            phonebook.add_contact();
-        if (command.compare("SEARCH") == 0)
-            phonebook.search_contacts();
-        if (command.compare("EXIT") == 0)
-            return 0;
-
-        std::cin.clear();
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    }
-    return 0;
 }

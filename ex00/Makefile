@@ -6,7 +6,7 @@
 #    By: mrahmani <mrahmani@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/13 14:46:17 by mrahmani          #+#    #+#              #
-#    Updated: 2022/03/13 14:59:19 by mrahmani         ###   ########.fr        #
+#    Updated: 2022/03/31 16:33:46 by mrahmani         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ CC	=	c++
 
 RM	=	rm -f
 
-CFLAGS	=	-Wall -Wextra -Werror
+CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 %.o: %.cpp
 	$(CC) $(CFLAGS) -o $@ -c $<
