@@ -6,7 +6,7 @@
 /*   By: mrahmani <mrahmani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 13:52:39 by mrahmani          #+#    #+#             */
-/*   Updated: 2022/04/01 10:28:02 by mrahmani         ###   ########.fr       */
+/*   Updated: 2022/04/01 10:35:45 by mrahmani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,11 +52,11 @@ Phonebook::~Phonebook(void)
     return;
 }
 
-
 bool isNumber(const std::string& str)
 {
     return str.find_first_not_of("0123456789") == std::string::npos;
 }
+
 void Phonebook::add_contact()
 {
     Contact contact;
