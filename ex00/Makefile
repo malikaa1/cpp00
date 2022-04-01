@@ -6,7 +6,7 @@
 #    By: mrahmani <mrahmani@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/13 14:46:17 by mrahmani          #+#    #+#              #
-#    Updated: 2022/03/31 16:33:46 by mrahmani         ###   ########.fr        #
+#    Updated: 2022/04/01 22:35:52 by mrahmani         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SRCS	=	megaphone.cpp
 
 OBJS	=	${SRCS:.cpp=.o}
 
-CC	=	c++
+CC	=	clang++
 
 RM	=	rm -f
 
