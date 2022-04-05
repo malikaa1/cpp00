@@ -6,11 +6,11 @@
 /*   By: mrahmani <mrahmani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 13:59:33 by mrahmani          #+#    #+#             */
-/*   Updated: 2022/03/20 17:03:01 by mrahmani         ###   ########.fr       */
+/*   Updated: 2022/04/02 16:12:15 by mrahmani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBBOK_CLASS_HPP
+#ifndef PHONEBOOK_CLASS_HPP
 #define PHONEBOOK_CLASS_HPP
 #include <iostream>
 #include <string.h>
@@ -21,8 +21,6 @@ class Phonebook
 {
 private:
     int count;
-
-
 public:
     Phonebook();
     ~Phonebook();

@@ -6,7 +6,7 @@
 /*   By: mrahmani <mrahmani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 13:52:39 by mrahmani          #+#    #+#             */
-/*   Updated: 2022/04/01 10:35:45 by mrahmani         ###   ########.fr       */
+/*   Updated: 2022/04/06 00:36:02 by mrahmani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -142,7 +142,7 @@ void Phonebook::search_contacts()
     index = -1;
     i = 0;
     print_header();
-    while (i < this->count)
+    while (i < 8)
     {
         std::cout << "|         " << this->contacts[i].index << "|";
         this->print_str(this->contacts[i].get_firstname());
@@ -175,7 +175,7 @@ int Phonebook::check_index(int index_)
     i = 0;
     if (index_ < 0 || index_ > 7)
         return 0;
-    while (i < this->count)
+    while (i < 8)
     {
         if (this->contacts[i].index == index_)
             return (1);

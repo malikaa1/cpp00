@@ -5,14 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mrahmani <mrahmani@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/03/15 13:50:59 by mrahmani          #+#    #+#              #
-#    Updated: 2022/04/01 22:38:19 by mrahmani         ###   ########.fr        #
+#    Created: 2022/03/21 20:39:52 by mrahmani          #+#    #+#              #
+#    Updated: 2022/04/05 00:13:45 by mrahmani         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	phonebook
+NAME	=	account
 
-SRCS	=	Phonebook.Class.cpp Contact.Class.cpp main.cpp
+SRCS	=	tests.cpp  Account.cpp 
 
 OBJS	=	${SRCS:.cpp=.o}
 
@@ -23,13 +23,12 @@ RM	=	rm -f
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 %.o: %.cpp
-	$(CC) -g $(CFLAGS) -c $< -o ${<:.cpp=.o}
-
+	$(CC) $(CFLAGS) -o $@ -c $<
 
 all:	${NAME}
 
 ${NAME}:	$(OBJS) 
-			$(CC) -g $(CFLAGS) -o $(NAME) $(OBJS)
+			$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
 
 clean:
 		${RM} ${OBJS} 
